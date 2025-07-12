@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Футбольный Клуб - Главная&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Подключение Tailwind CSS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f2f5; /* Светло-серый фон */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 5rem; /* Отступ для фиксированной шапки */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Основной темно-зеленый цвет из логотипа */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.primary-dark-green {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1A432F;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Акцентный зеленый цвет */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.accent-green {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4CAF50; /* Более яркий зеленый для акцентов */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: color 0.3s ease, transform 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link::after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: -5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4CAF50; /* Акцентный зеленый при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-link:hover::after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem; /* Закругленные углы */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>/* Более мягкая и современная тень */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-8px); /* Чуть больше подъем */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Более выраженная тень при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.button-primary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4CAF50; /* Акцентный зеленый */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600; /* Полужирный текст */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s ease, transform 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.button-primary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #388E3C; /* Темнее акцентный зеленый при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px) scale(1.02); /* Небольшое увеличение и подъем */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Стили для слайдера */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slides {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Более плавная анимация */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 500px; /* Высота слайда */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-size: cover;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-position: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-overlay {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>inset: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%); /* Градиентный полупрозрачный фон */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: flex-end; /* Выравнивание текста внизу */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Тень для текста */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-overlay h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3.5rem; /* Увеличенный размер заголовка */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 800; /* Очень жирный */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slide-overlay p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5rem; /* Увеличенный размер текста */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500; /* Средний жирность */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-nav-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(0, 0, 0, 0.4); /* Чуть светлее фон кнопок */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.25rem; /* Меньший паддинг */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2rem; /* Увеличенный размер стрелок */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 9999px; /* Полностью круглые кнопки */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 10;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s ease, transform 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-nav-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(0, 0, 0, 0.7); /* Темнее при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%) scale(1.1); /* Небольшое увеличение */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-nav-button.prev {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 2rem; /* Отступ от края */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slider-nav-button.next {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 2rem; /* Отступ от края */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.slide {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>height: 300px; /* Меньшая высота для мобильных устройств */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.slide-overlay h3 {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.slide-overlay p {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.slider-nav-button {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 0.5rem 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>left: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>right: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Улучшения для таблиц */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-collapse: separate; /* Для border-radius на ячейках */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-spacing: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th, td {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #e2e8f0; /* Легкая граница */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th:first-child { border-top-left-radius: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>th:last-child { border-top-right-radius: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr:last-child td:first-child { border-bottom-left-radius: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr:last-child td:last-child { border-bottom-right-radius: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f7fafc; /* Очень светлый фон при наведении на строку */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.table-header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #edf2f7; /* Светло-серый фон для заголовков таблицы */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #4a5568;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.table-row-hover:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f7fafc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Стили для карточек игроков */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem; /* Закругленные углы */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden; /* Скрываем содержимое, выходящее за пределы */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 1.5rem; /* Отступ сверху для изображения */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 1.5rem; /* Отступ снизу */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-8px); /* Чуть больше подъем */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Более выраженная тень при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1; /* Чтобы информация была поверх оверлея */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-description-overlay {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(26, 67, 47, 0.9); /* Темно-зеленый полупрозрачный фон */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(100%); /* Изначально скрыт внизу */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom-left-radius: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom-right-radius: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%; /* Полная высота карточки при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0; /* Изначально невидимый */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card:hover .player-description-overlay {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0); /* Показываем при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1; /* Делаем видимым */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card:hover .player-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-100%); /* Сдвигаем информацию вверх, чтобы освободить место */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0; /* Скрываем основную информацию */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card .player-image {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.player-card:hover .player-image {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(0.8); /* Уменьшаем изображение при наведении */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="antialiased"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Шапка сайта --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="primary-dark-green text-white py-4 shadow-md fixed top-0 left-0 right-0 z-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-3xl font-bold mb-2 md:mb-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="index.html" class="text-white hover:text-gray-300 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Логотип АФЛ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img src="uploaded:Логотип АФЛ.jpeg-9e24b9f4-e24d-4542-8bf9-54ee77275c32" alt="Логотип АФЛ" class="h-12 mr-3 rounded-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ul class="flex space-x-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;a href="index.html" class="nav-link text-lg font-medium"&gt;Главная&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;a href="news.html" class="nav-link text-lg font-medium"&gt;Новости&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;a href="schedule.html" class="nav-link text-lg font-medium"&gt;Расписание&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;a href="team.html" class="nav-link text-lg font-medium"&gt;Команда&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;&lt;a href="contact.html" class="nav-link text-lg font-medium"&gt;Контакты&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Слайдер --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="w-full"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="slider-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="slides" id="slider-slides"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Слайд 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="news.html#news-article-1" class="slide" style="background-image: url('https://placehold.co/1200x500/1A432F/ffffff?text=Великая+Победа');"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-white"&gt;Великая Победа в Дерби!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-white"&gt;ФК "АФЛ" одержал убедительную победу над своим принципиальным соперником.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Слайд 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="news.html#news-article-2" class="slide" style="background-image: url('https://placehold.co/1200x500/1A432F/ffffff?text=Новый+Трансфер');"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-white"&gt;Новый Трансфер: Звездный Нападающий&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-white"&gt;Клуб объявил о подписании контракта с известным нападающим.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Слайд 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="news.html#news-article-3" class="slide" style="background-image: url('https://placehold.co/1200x500/1A432F/ffffff?text=Подготовка+к+Сезону');"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-white"&gt;Подготовка к Новому Сезону&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-white"&gt;Команда активно тренируется, готовясь к предстоящему сезону.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Слайд 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="news.html#news-article-4" class="slide" style="background-image: url('https://placehold.co/1200x500/1A432F/ffffff?text=Интервью+Тренера');"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="slide-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-white"&gt;Интервью с Главным Тренером&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-white"&gt;Эксклюзивное интервью о планах на будущее и стратегии команды.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="slider-nav-button prev" id="prev-slide"&gt;&amp;#10094;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="slider-nav-button next" id="next-slide"&gt;&amp;#10095;&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Раздел новостей --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="news" class="container mx-auto py-12 px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800"&gt;Последние Новости&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Новостная карточка 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6" id="news-article-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+1" alt="Новость 1" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Великая Победа в Дерби!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;ФК "АФЛ" одержал убедительную победу над своим принципиальным соперником в напряженном матче. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Новостная карточка 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6" id="news-article-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+2" alt="Новость 2" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Новый Трансфер: Звездный Нападающий&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Клуб объявил о подписании контракта с известным нападающим, который усилит атакующую мощь команды. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Новостная карточка 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6" id="news-article-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+3" alt="Новость 3" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Подготовка к Новому Сезону&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Команда активно тренируется, готовясь к предстоящему сезону. Тренерский штаб доволен прогрессом. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Новостная карточка 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6" id="news-article-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+4" alt="Новость 4" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Интервью с Главным Тренером&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Эксклюзивное интервью о планах на будущее и стратегии команды. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Дополнительная новость 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+5" alt="Новость 5" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Обзор Матча: ФК "АФЛ" против "Лидер"&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Подробный анализ недавнего матча, ключевые моменты и комментарии игроков.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Дополнительная новость 6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/400x250/4CAF50/ffffff?text=Новость+6" alt="Новость 6" class="w-full h-48 object-cover rounded-md mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-semibold mb-2 text-gray-800"&gt;Фан-зона: Поддержите Команду!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-4"&gt;Информация о предстоящих мероприятиях для болельщиков и как присоединиться к фан-клубу.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-blue-600 hover:underline font-medium"&gt;Читать полностью &amp;rarr;&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Раздел расписания --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="schedule" class="container mx-auto py-12 px-4 bg-white rounded-lg shadow-lg mt-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800"&gt;Предстоящие Матчи&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="overflow-x-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;table class="min-w-full bg-white rounded-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="table-header text-sm leading-normal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;th class="py-3 px-6 text-left"&gt;Дата&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;th class="py-3 px-6 text-left"&gt;Время&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;th class="py-3 px-6 text-left"&gt;Соперник&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;th class="py-3 px-6 text-left"&gt;Место&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;th class="py-3 px-6 text-left"&gt;Турнир&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;tbody class="text-gray-600 text-base font-light"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="border-b border-gray-200 table-row-hover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left whitespace-nowrap"&gt;15 июля 2025&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;19:00&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left font-semibold"&gt;ФК "Молния"&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Домашний стадион&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Лига Чемпионов&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="border-b border-gray-200 table-row-hover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left whitespace-nowrap"&gt;22 июля 2025&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;17:00&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left font-semibold"&gt;ФК "Торнадо"&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Выездной матч&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Национальный Кубок&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="border-b border-gray-200 table-row-hover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left whitespace-nowrap"&gt;29 июля 2025&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;20:30&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left font-semibold"&gt;ФК "Звезда"&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Домашний стадион&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Премьер-Лига&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;tr class="table-row-hover"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left whitespace-nowrap rounded-bl-lg"&gt;5 августа 2025&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;18:00&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left font-semibold"&gt;ФК "Титан"&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left rounded-br-lg"&gt;Выездной матч&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;td class="py-3 px-6 text-left"&gt;Премьер-Лига&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Раздел "О команде" --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="team" class="container mx-auto py-12 px-4 mt-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800"&gt;Наша Команда&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Игрок 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+1" alt="Игрок 1" class="player-image w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Иван Петров&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Нападающий&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 9&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Иван Петров - ключевой нападающий команды, известный своей скоростью и точными ударами.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Присоединился к клубу в 2023 году и быстро стал одним из лидеров.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Игрок 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+2" alt="Игрок 2" class="player-image w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Сергей Иванов&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Полузащитник&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 10&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Сергей Иванов - креативный полузащитник с отличным видением поля.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Мастер паса и организатор атак, незаменимый игрок в центре поля.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Игрок 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+3" alt="Игрок 3" class="player-image w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Дмитрий Сидоров&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Защитник&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 4&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Дмитрий Сидоров - надежный центральный защитник, известный своей силовой борьбой<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>и умением читать игру. Оплот обороны команды.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Игрок 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+4" alt="Игрок 4" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Алексей Кузнецов&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Вратарь&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 1&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Алексей Кузнецов - основной вратарь команды, обладающий отличной реакцией<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>и способностью делать невероятные сейвы.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Дополнительный игрок 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+5" alt="Игрок 5" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Максим Ковалев&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Защитник&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 5&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Максим Ковалев - универсальный защитник, способный играть как в центре, так и на фланге.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Отличается выносливостью и точными передачами.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Дополнительный игрок 6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+6" alt="Игрок 6" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Андрей Васильев&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Полузащитник&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 8&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Андрей Васильев - опытный полузащитник, душа команды.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Его лидерские качества и умение вести игру бесценны.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Дополнительный игрок 7 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="player-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://placehold.co/200x200/4CAF50/ffffff?text=Игрок+7" alt="Игрок 7" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-500 shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;Павел Зайцев&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;Нападающий&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500 text-sm"&gt;Номер: 11&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="player-description-overlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-white text-base"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Павел Зайцев - молодой и перспективный нападающий.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Его дриблинг и непредсказуемость создают проблемы для любой защиты.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Раздел контактов --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="container mx-auto py-12 px-4 mt-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="text-4xl font-extrabold text-center mb-10 text-gray-800"&gt;Свяжитесь с Нами&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="name" class="block text-gray-700 text-sm font-bold mb-2"&gt;Имя:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Ваше имя"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="email" class="block text-gray-700 text-sm font-bold mb-2"&gt;Email:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Ваш email"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label for="message" class="block text-gray-700 text-sm font-bold mb-2"&gt;Сообщение:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Ваше сообщение"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center justify-between"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button type="submit" class="button-primary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Отправить</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mt-8 text-center text-gray-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-2"&gt;&lt;strong&gt;Адрес:&lt;/strong&gt; г. Атырау, ул. Примерная, 123&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="mb-2"&gt;&lt;strong&gt;Телефон:&lt;/strong&gt; +7 (701) 123-45-67&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; info@aflatyrau.kz&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Футер --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="primary-dark-green text-white py-8 mt-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto text-center px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm"&gt;&amp;copy; 2025 Футбольный Клуб "АФЛ". Все права защищены.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-center space-x-6 mt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-gray-300 hover:text-white transition-colors duration-200"&gt;Facebook&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-gray-300 hover:text-white transition-colors duration-200"&gt;Twitter&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="text-gray-300 hover:text-white transition-colors duration-200"&gt;Instagram&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// JavaScript для функциональности слайдера</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentSlide = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const slidesContainer = document.getElementById('slider-slides');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const slides = document.querySelectorAll('.slide');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const totalSlides = slides.length;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Функция для отображения конкретного слайда</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showSlide(index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (index &gt;= totalSlides) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentSlide = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (index &lt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentSlide = totalSlides - 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentSlide = index;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const offset = -currentSlide * 100;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slidesContainer.style.transform = `translateX(${offset}%)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Обработчики событий для кнопок навигации</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('prev-slide').addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSlide(currentSlide - 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('next-slide').addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSlide(currentSlide + 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Автоматическая смена слайдов</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let slideInterval = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSlide(currentSlide + 1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}, 5000); // Смена каждые 5 секунд</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Остановка автосмены при наведении мыши и возобновление при уходе</p>
+<p class="p1"><span class="Apple-converted-space">        </span>slidesContainer.addEventListener('mouseenter', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clearInterval(slideInterval);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>slidesContainer.addEventListener('mouseleave', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>slideInterval = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showSlide(currentSlide + 1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 5000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Инициализация слайдера при загрузке страницы</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.onload = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showSlide(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+<p class="p2"><br></p>
+</body>
+</html>
